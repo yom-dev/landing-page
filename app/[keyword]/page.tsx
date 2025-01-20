@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { Container } from "@/app/components/container";
 import Hero from "@/app/components/hero";
