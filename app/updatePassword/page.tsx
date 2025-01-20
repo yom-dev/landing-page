@@ -21,18 +21,21 @@ export default function UpdatePassword() {
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
   useEffect(() => {
-    const hash = window.location.hash; // URL의 해시 부분 가져오기
-    const params = new URLSearchParams(hash.substring(1)); // '#' 이후의 부분 파싱
-    const accessToken = params.get("access_token");
-    const refreshToken = params.get("refresh_token");
+    if (typeof window !== "undefined") {
+      // 클라이언트에서만 실행
+      const hash = window.location.hash; // URL의 해시 부분 가져오기
+      const params = new URLSearchParams(hash.substring(1)); // '#' 이후의 부분 파싱
+      const accessToken = params.get("access_token");
+      const refreshToken = params.get("refresh_token");
 
-    if (accessToken) {
-      supabase.auth.setSession({
-        access_token: accessToken,
-        refresh_token: refreshToken || "",
-      });
-    } else {
-      setError("The link is invalid / has expired. Please try again.");
+      if (accessToken) {
+        supabase.auth.setSession({
+          access_token: accessToken,
+          refresh_token: refreshToken || "",
+        });
+      } else {
+        setError("The link is invalid / has expired. Please try again.");
+      }
     }
   }, []); // 빈 배열을 사용하여 한 번만 실행되도록 설정
 
