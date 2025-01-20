@@ -20,7 +20,6 @@ export default function UpdatePassword() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
   useEffect(() => {
     const hash = window.location.hash; // URL의 해시 부분 가져오기
     const params = new URLSearchParams(hash.substring(1)); // '#' 이후의 부분 파싱
@@ -35,7 +34,7 @@ export default function UpdatePassword() {
     } else {
       setError("The link is invalid / has expired. Please try again.");
     }
-  }, [supabase.auth]);
+  }, []); // 빈 배열을 사용하여 한 번만 실행되도록 설정
 
   // 비밀번호 유효성 검사 함수
   const validatePassword = (password: string) => {
