@@ -1,5 +1,5 @@
 "use client";
-import TestimonialSingle from "./testimonial-single";
+// import TestimonialSingle from "./testimonial-single";
 import { Button } from "./button";
 export default function Pricing({ config }: { config?: any }) {
   return (
@@ -8,7 +8,7 @@ export default function Pricing({ config }: { config?: any }) {
         <div className="mb-20 flex w-full flex-col text-center">
           <div className="mb-4">
             <div className="mx-auto max-w-fit animate-pulse whitespace-nowrap rounded-full bg-blue-500 px-2 py-1 text-xs font-semibold text-white">
-              ✨ Launch discount — $50 OFF ✨
+              ✨ Now available at App Store! ✨
             </div>
           </div>
           <h2 className="mx-auto mb-8 max-w-xl text-3xl font-bold tracking-tight text-slate-800 lg:text-5xl">
@@ -22,19 +22,19 @@ export default function Pricing({ config }: { config?: any }) {
         <div className="relative flex flex-col items-stretch justify-center gap-8 lg:flex-row">
           <PricingCard
             key="Free Plan"
-            title="Free Plan"
+            title="FREE"
             isFeatured={false}
             price={0}
             originalPrice={0}
             features={[
-              <span key="feature1">50 AI-generated lesson plans</span>,
-              <span key="feature2">Basic customization options</span>,
-              <span key="feature3">Email support</span>,
+              <span key="feature1">Exciting content uploaded every month</span>,
+              <span key="feature2">No payment required</span>,
+              <span key="feature3">HAhahahahah</span>,
             ]}
-            buttonLink="/sign-up"
-            description="Perfect for trying out QuillMinds"
+            buttonLink="https://apps.apple.com/kr/app/yom-app/id6737324672"
+            description="yom.app is completely free!"
           />
-          <PricingCard
+          {/* <PricingCard
             key="Pro Plan"
             title="Pro Plan"
             isFeatured={true}
@@ -49,9 +49,9 @@ export default function Pricing({ config }: { config?: any }) {
             ]}
             buttonLink="/sign-up?priceId=pro-plan"
             description="For educators who want the full QuillMinds experience"
-          />
+          /> */}
         </div>
-        <TestimonialSingle
+        {/* <TestimonialSingle
           testimonial={{
             name: "Sarah Johnson",
             content:
@@ -59,7 +59,7 @@ export default function Pricing({ config }: { config?: any }) {
             schoolName: "Oakridge Elementary",
             image: "https://api.dicebear.com/6.x/avataaars/svg?seed=Sarah",
           }}
-        />
+        /> */}
       </div>
     </section>
   );
@@ -146,7 +146,7 @@ function PricingCard({
           </ul>
           <div className="space-y-2">
             <Button href={buttonLink} color="blue" className="w-full">
-              Get Quillminds
+              Download yom.app
             </Button>
           </div>
         </div>

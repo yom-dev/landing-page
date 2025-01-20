@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import TestimonialSingle from "./testimonial-single";
+// import TestimonialSingle from "./testimonial-single";
 import feature1 from "../../public/feature_1.gif";
 import feature2 from "../../public/feature_2.png";
 import feature3 from "../../public/feature_3.gif";
@@ -8,9 +8,9 @@ import feature3 from "../../public/feature_3.gif";
 const features = [
   {
     id: 1,
-    title: "AI-Powered Lesson Creation",
+    title: "Direct and intuitive interface",
     description:
-      "Say goodbye to hours of planning. Our AI creates engaging lesson plans in minutes, giving you more time to focus on what matters most - your students.",
+      "Say goodbye to compliacted self-development apps. Our app provides content and function in the most intuitive and simple user interface.",
     additionalInfo: [
       "Save hours of prep time",
       "Get fresh, creative ideas",
@@ -58,7 +58,7 @@ const features = [
   },
   {
     id: 2,
-    title: "One-Click Resource Generation",
+    title: "Various contents provided to track your day.",
     description:
       "Need a quiz, worksheet, or study guide? Our AI creates them instantly. Just choose what you need, and it's done - saving you time and boosting your productivity.",
     additionalInfo: [
@@ -107,7 +107,7 @@ const features = [
   },
   {
     id: 3,
-    title: "Easy Editing and Sharing",
+    title: "Simply add based on your preferences",
     description:
       "Tweak AI-generated content to perfection and share it instantly. Edit with ease, export as a polished PDF, and you're ready to teach - it's that simple!",
     additionalInfo: [
@@ -165,11 +165,11 @@ export default function AccordionFeatures({ config }: { config?: any }) {
     >
       <div className="px-8">
         <h2 className="mb-12 text-4xl font-extrabold tracking-tight text-slate-800 md:mb-24 lg:text-5xl">
-          AI-powered lesson preparation <br />
+          Tedious tracking <br />
           <span className="relative mt-2 inline-block">
             <span className="absolute inset-0 -rotate-1 transform bg-blue-600"></span>
             <span className="relative z-10 px-2 py-2 text-white">
-              made easy
+              made simple and easy.
             </span>
           </span>
         </h2>
@@ -290,7 +290,7 @@ export default function AccordionFeatures({ config }: { config?: any }) {
           </div>
         </div>
       </div>
-      <TestimonialSingle
+      {/* <TestimonialSingle
         testimonial={{
           name: "Sarah Johnson",
           content:
@@ -298,7 +298,7 @@ export default function AccordionFeatures({ config }: { config?: any }) {
           schoolName: "Oakridge Elementary",
           image: "https://api.dicebear.com/6.x/avataaars/svg?seed=Sarah",
         }}
-      />
+      /> */}
     </section>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import TestimonialSingle from "./testimonial-single";
+// import TestimonialSingle from "./testimonial-single";
 
 const faqData = [
   {
@@ -74,33 +74,34 @@ const FAQItem = ({
   onClick: () => void;
 }) => {
   return (
-    <li>
-      <button
-        className="relative flex w-full items-center gap-2 border-t border-slate-200 py-5 text-left text-base font-semibold md:text-lg"
-        onClick={onClick}
-        aria-expanded={isOpen}
-      >
-        <span className="flex-1 text-slate-800">{question}</span>
-        <svg
-          className={`ml-auto h-4 w-4 flex-shrink-0 fill-current transition-transform duration-200 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M8 12L2 6h12l-6 6z" />
-        </svg>
-      </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="pb-5 leading-relaxed text-slate-600">
-          {typeof answer === "string" ? <p>{answer}</p> : answer}
-        </div>
-      </div>
-    </li>
+    <div></div>
+    // <li>
+    //   <button
+    //     className="relative flex w-full items-center gap-2 border-t border-slate-200 py-5 text-left text-base font-semibold md:text-lg"
+    //     onClick={onClick}
+    //     aria-expanded={isOpen}
+    //   >
+    //     <span className="flex-1 text-slate-800">{question}</span>
+    //     <svg
+    //       className={`ml-auto h-4 w-4 flex-shrink-0 fill-current transition-transform duration-200 ${
+    //         isOpen ? "rotate-180" : ""
+    //       }`}
+    //       viewBox="0 0 16 16"
+    //       xmlns="http://www.w3.org/2000/svg"
+    //     >
+    //       <path d="M8 12L2 6h12l-6 6z" />
+    //     </svg>
+    //   </button>
+    //   <div
+    //     className={`overflow-hidden transition-all duration-300 ease-in-out ${
+    //       isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+    //     }`}
+    //   >
+    //     <div className="pb-5 leading-relaxed text-slate-600">
+    //       {typeof answer === "string" ? <p>{answer}</p> : answer}
+    //     </div>
+    //   </div>
+    // </li>
   );
 };
 
@@ -112,37 +113,38 @@ export default function FAQ({ config }: { config?: any }) {
   };
 
   return (
-    <section className="bg-slate-50" id="faq">
-      <div className="mx-auto max-w-7xl px-8 py-24">
-        <div className="flex flex-col gap-12 md:flex-row">
-          <div className="flex basis-1/2 flex-col text-left">
-            <p className="mb-4 inline-block font-bold text-blue-500">FAQ</p>
-            <p className="text-3xl font-extrabold text-slate-800 md:text-4xl">
-              Frequently Asked Questions
-            </p>
-          </div>
-          <ul className="basis-1/2">
-            {faqData.map((item, index) => (
-              <FAQItem
-                key={index}
-                question={item.question}
-                answer={item.answer}
-                isOpen={openIndex === index}
-                onClick={() => handleToggle(index)}
-              />
-            ))}
-          </ul>
-        </div>
-        <TestimonialSingle
-          testimonial={{
-            name: "Emily Thompson",
-            content:
-              "QuillMinds has transformed my teaching experience. The AI-powered lesson plans are not only time-saving but also incredibly creative and engaging for my students.",
-            schoolName: "Westfield High School",
-            image: "https://api.dicebear.com/6.x/avataaars/svg?seed=Emily",
-          }}
-        />
-      </div>
-    </section>
+    <div></div>
+    // <section className="bg-slate-50" id="faq">
+    //   <div className="mx-auto max-w-7xl px-8 py-24">
+    //     <div className="flex flex-col gap-12 md:flex-row">
+    //       <div className="flex basis-1/2 flex-col text-left">
+    //         <p className="mb-4 inline-block font-bold text-blue-500">FAQ</p>
+    //         <p className="text-3xl font-extrabold text-slate-800 md:text-4xl">
+    //           Frequently Asked Questions
+    //         </p>
+    //       </div>
+    //       <ul className="basis-1/2">
+    //         {faqData.map((item, index) => (
+    //           <FAQItem
+    //             key={index}
+    //             question={item.question}
+    //             answer={item.answer}
+    //             isOpen={openIndex === index}
+    //             onClick={() => handleToggle(index)}
+    //           />
+    //         ))}
+    //       </ul>
+    //     </div>
+    //     <TestimonialSingle
+    //       testimonial={{
+    //         name: "Emily Thompson",
+    //         content:
+    //           "QuillMinds has transformed my teaching experience. The AI-powered lesson plans are not only time-saving but also incredibly creative and engaging for my students.",
+    //         schoolName: "Westfield High School",
+    //         image: "https://api.dicebear.com/6.x/avataaars/svg?seed=Emily",
+    //       }}
+    //     />
+    //   </div>
+    // </section>
   );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from "@/app/components/container";
 import Hero from "@/app/components/hero";
 import LogoClouds from "@/app/components/logo-clouds";
@@ -45,13 +47,13 @@ export default function KeywordPage({
     return redirect("/");
   }
   //Use the decoded keyword when needed
-  const decodedKeyword = decodeURIComponent(params.keyword).replace(/-/g, " ");
+  // const decodedKeyword = decodeURIComponent(params.keyword).replace(/-/g, " ");
   const config = keywordConfigs[params.keyword] || {};
 
   return (
     <Container>
       <Header />
-      <Hero config={config.Hero} />
+      <Hero />
       <LogoClouds />
       <AccordionFeatures config={config.AccordionFeatures} />
       <BeforeAfter config={config.BeforeAfter} />

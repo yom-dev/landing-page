@@ -12,7 +12,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Container } from "./container";
 import { NavLinks } from "./nav-links";
 import { Button } from "./button";
-import SVGLogo from "./svg-logo";
+
+import Image from "next/image";
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -62,15 +63,16 @@ export function Header() {
         <Container className="flex relative z-50 justify-between py-8">
           <div className="flex relative z-10 gap-16 justify-between items-center w-full">
             <Link href="/" className="flex gap-2 items-center font-semibold">
-              <SVGLogo />
-              <span className="text-lg font-bold text-slate-800">
-                Quillminds
-              </span>
+              {/* <Image width={28} height={28} src="/logo.png" alt="" /> */}
+              <span className="text-xl font-bold text-slate-800">yom</span>
             </Link>
             <div className="hidden justify-center items-center lg:flex lg:gap-10">
               <NavLinks />
-              <Button href="/sign-up" color="blue">
-                Get Started
+              <Button
+                href="https://apps.apple.com/kr/app/yom-app/id6737324672"
+                color="blue"
+              >
+                Download now
               </Button>
             </div>
           </div>
@@ -113,7 +115,7 @@ export function Header() {
                           }}
                           className="absolute inset-x-0 top-0 z-0 px-6 pt-32 pb-6 rounded-b-2xl shadow-2xl origin-top bg-slate-50 shadow-slate-900/20"
                         >
-                          <div className="space-y-4">
+                          <div className="space-y-1">
                             <MobileNavLink href="/#features">
                               Features
                             </MobileNavLink>
@@ -127,7 +129,9 @@ export function Header() {
                             <Button href="/" outline>
                               Log in
                             </Button>
-                            <Button href="#">Get Started</Button>
+                            <Button href="https://apps.apple.com/kr/app/yom-app/id6737324672">
+                              Download now
+                            </Button>
                           </div>
                         </PopoverPanel>
                       </>
