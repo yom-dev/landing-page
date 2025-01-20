@@ -35,7 +35,7 @@ export default function UpdatePassword() {
     } else {
       setError("The link is invalid / has expired. Please try again.");
     }
-  }, []);
+  }, [supabase.auth]);
 
   // 비밀번호 유효성 검사 함수
   const validatePassword = (password: string) => {
